@@ -5,7 +5,7 @@ angular.module('shoes', ['ui.router'])
 			url: '/',
 			templateUrl: '../views/home.html',
 			controller: 'mainCtrl'
-
+ 
 		})
 		.state('womenShoes', {
 			url: '/womenShoes',

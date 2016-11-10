@@ -1,1 +1,24 @@
-CART
+<body>
+<h1>Shopping Cart</h1>
+
+<div class="userCart">
+	<div><h2>Shoe Names</h2><h2>Shoe</h2><h2>Price</h2>
+	
+	<div class="item" ng-repeat="item in cart">
+		{{item.shoename}}
+		<img src="../{{item.imageurl}}">
+		${{item.price}}
+		<button ng-click="deleteMe(item)">Remove form Cart</button>
+	</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>

@@ -1,4 +1,14 @@
 <h1>Women's Shoes</h1>
 
+<div class="shoeBoxes">
 
-{{shoes}}
+<div class="shoeBox" ng-repeat="shoe in shoes">
+	<h2>{{shoe.shoename}}</h2>
+	<img src="../{{shoe.imageurl}}">
+	<p>Price: ${{shoe.price}}</p>
+	<p>Available in: {{shoe.color.toString()}}</p>
+	<button ng-click="addToCart(shoe)">Buy</button>
+
+</div>
+
+</div>

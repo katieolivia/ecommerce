@@ -1,4 +1,4 @@
-angular.module('shoes').controller('womenShoesCtrl', function($scope, mainService) {
+angular.module('shoes').controller('womenShoesCtrl', function($scope, mainService, $state) {
 	$scope.getShoes = function() {
 		mainService.getShoes().then(function(response){
 			console.log('this is data', response);
@@ -7,8 +7,21 @@ angular.module('shoes').controller('womenShoesCtrl', function($scope, mainServic
 		})
 	};
 
-	// $scope.shoes = $scope.getShoes();
-console.log('shoes', $scope.shoes)
+	
+
+
+
+	$scope.addToCart = function(item) {
+		mainService.createCart(item).then(function(response){
+			$state.go('cart');
+
+			return response;
+		})
+		
+	}
+
+
+
 
 
 

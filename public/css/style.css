@@ -3,3 +3,32 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+.cart {
+	height: 50px;
+	width: 50px;
+}
+
+
+.shoeBoxes {
+	border-style: solid;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: black;
+
+}
+
+.shoeBox {
+	
+	width: 200px;
+	border-style: double;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	color: white;
+
+
+}

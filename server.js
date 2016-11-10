@@ -26,6 +26,8 @@ app.set('db', massiveInstance);
 var controller = require('./shoeCtrl');
 // var db = app.get('sql');
 
+
+
 //console.log('this is db', db);
 
 
@@ -44,7 +46,8 @@ app.use(cors(corsOptions));
 
 
 //app.post('/api/shoes', controller.create);
-app.get('/api/shoes', controller.getAll)
+app.get('/api/shoes', controller.getAll);
+app.post('/api/cart', controller.createCart);
 //app.get('/api/shoes/:shoeId', controller.getOne);
 //app.put('/api/shoes/:shoeId/desc', controller.update);
 //app.delete('/api/shoe/:shoesId', controller.delete);
