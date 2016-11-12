@@ -1,0 +1,17 @@
+{
+  "name": "ecommerce",
+  "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
+  "main": "server.js",
+  "authors": [
+    "Kathryn Nutzman <kathryn.nutzman@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/katieolivia/ecommerce",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

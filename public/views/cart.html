@@ -1,24 +1,25 @@
-<body>
+
 <h1>Shopping Cart</h1>
 
-<div class="userCart">
-	<div><h2>Shoe Names</h2><h2>Shoe</h2><h2>Price</h2>
+<div class="items">
 	
 	<div class="item" ng-repeat="item in cart">
-		{{item.shoename}}
+		<p>{{item.shoename}}</p>
 		<img src="../{{item.imageurl}}">
-		${{item.price}}
-		<button ng-click="deleteMe(item)">Remove form Cart</button>
+		<p>${{item.price}}</p>
+		<p>quantity: {{item.quantity}}
+		<button ng-click="addOne(item)">+</button><button ng-click="takeOne(item)">-</button></p>
 	</div>
 
 
-
-
+	<button>Checkout</button>
 </div>
 
+<!-- <ngcart-cart></ngcart-cart>
+
+<ngcart-checkout service="http" settings="{ url:'/checkout' }">checkout</ngcart-checkout> -->
 
 
 
 
 
-</body>

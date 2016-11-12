@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var session = require('express-session');
 
+
 var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -48,6 +49,10 @@ app.use(cors(corsOptions));
 //app.post('/api/shoes', controller.create);
 app.get('/api/shoes', controller.getAll);
 app.post('/api/cart', controller.createCart);
+app.put('/api/cart/update', controller.addOne);
+app.get('/api/cart/display', controller.getCart);
+app.post('/api/cart/delete', controller.takeOne);
+
 //app.get('/api/shoes/:shoeId', controller.getOne);
 //app.put('/api/shoes/:shoeId/desc', controller.update);
 //app.delete('/api/shoe/:shoesId', controller.delete);

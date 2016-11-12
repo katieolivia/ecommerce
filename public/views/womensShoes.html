@@ -7,8 +7,17 @@
 	<img src="../{{shoe.imageurl}}">
 	<p>Price: ${{shoe.price}}</p>
 	<p>Available in: {{shoe.color.toString()}}</p>
+
+
 	<button ng-click="addToCart(shoe)">Buy</button>
+	
+<!-- 
+<ngcart-addtocart id="{{ shoe.id }}" name="{{ shoe.shoename }}" price="{{ shoe.price }}"data="shoe" image="../{{shoe.imageurl}}">Buy</ngcart-addtocart> -->
+
+
 
 </div>
+
+
 
 </div>

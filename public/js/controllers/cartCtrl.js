@@ -1,8 +1,27 @@
-angular.module('shoes').controller('cartCtrl', function($scope, mainService){
-	$scope.cart = mainService.cart.data;
-	console.log('this is cart', $scope.cart);
+angular.module('shoes').controller('cartCtrl', function($scope, mainService, cart){
+	
 
-	$scope.deleteMe = function(product) {
-		
-	}
+
+// ngCart.setTaxRate(6.85);
+// ngCart.setShipping(4.99);
+// console.log(ngCart.getCart());
+	$scope.cart = cart;
+
+	$scope.addOne = function(shoe) {
+		mainService.addOne(shoe).then(function(response) {
+			$scope.cart = response;
+		})
+	};
+
+	
+
+
+	$scope.takeOne = function(shoe) {
+		mainService.takeOne(shoe).then(function(response) {
+			$scope.cart = response;
+		})
+	};
+
+
+
 })

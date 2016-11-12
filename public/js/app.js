@@ -16,7 +16,12 @@ angular.module('shoes', ['ui.router'])
 		.state('cart', {
 			url: '/cart',
 			templateUrl: '../views/cart.html',
-			controller: 'cartCtrl'
+			controller: 'cartCtrl',
+			resolve: {
+				cart: function (mainService) {
+					return mainService.getCart();
+				}
+			}
 		})
 		.state('checkout', {
 			url: 'checkout',
